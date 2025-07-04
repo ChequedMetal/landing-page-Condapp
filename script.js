@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     if (isAndroid) {
       downloadButton.style.display = "inline-block";
-      downloadButton.href = "https://TU-ENLACE-DE-DESCARGA-APK";
+      downloadButton.href = "https://drive.google.com/uc?id=17Da5n1RMcPMRipTJdV12BNthH3zi44An";
     } else {
       downloadButton.style.display = "none";
       qrSection.style.display = "block";
