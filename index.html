@@ -1,99 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Descarga CondAPP</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      color: #2c3e50;
-    }
-    p {
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-      max-width: 600px;
-    }
-    .mockup {
-      width: 250px;
-      border-radius: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-bottom: 1.5rem;
-    }
-    .download-btn {
-      background: #2980b9;
-      color: white;
-      padding: 1rem 1.5rem;
-      border: none;
-      border-radius: 0.5rem;
-      font-size: 1rem;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    .download-btn:hover {
-      background: #1f5f87;
-    }
-    .qr-container img {
-      width: 200px;
-      margin-top: 1rem;
-    }
-    footer {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #777;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CondAPP - Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>CondAPP</h1>
-  <p>
-    Gestiona tu condominio de manera rápida y sencilla. Descarga CondAPP para acceder a todas las funciones desde tu dispositivo Android.
-  </p>
-
-  <!-- Imagen de muestra opcional -->
-  <!-- <img class="mockup" src="condapp-mockup.png" alt="Vista previa de CondAPP"> -->
-
-  <!-- Sección para móvil -->
-  <div id="mobile-content" style="display:none;">
-    <a href="TU_ARCHIVO_APK.apk" class="download-btn">Descargar APK</a>
-  </div>
-
-  <!-- Sección para PC -->
-  <div id="desktop-content" style="display:none;">
-    <p>Escanea este código QR con tu teléfono para descargar la app:</p>
-    <div class="qr-container">
-      <img src="qr.png" alt="Código QR para abrir la página en tu móvil">
+  <!-- Header -->
+  <header class="hero">
+    <div class="container">
+      <h1>Bienvenido a <span>CondAPP</span></h1>
+      <p>La plataforma definitiva para gestionar tu condominio de forma sencilla y eficiente.</p>
+      <a id="download-button" href="#" class="btn">Descargar para Android</a>
     </div>
-  </div>
+  </header>
 
-  <footer>
-    &copy; 2025 CondAPP | contacto@condapp.cl
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2>Características Principales</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <h3>Gestión de Avisos</h3>
+          <p>Publica anuncios importantes para todos los residentes al instante.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Reportes de Incidencias</h3>
+          <p>Permite que los vecinos reporten problemas fácilmente.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Comunicación Segura</h3>
+          <p>La información siempre protegida y accesible solo para quienes corresponda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <div class="container">
+      <h2>Galería</h2>
+      <div class="gallery-grid">
+        <img src="images/screenshot1.jpg" alt="Pantalla 1">
+        <img src="images/screenshot2.jpg" alt="Pantalla 2">
+        <img src="images/screenshot3.jpg" alt="Pantalla 3">
+        <img src="images/screenshot4.jpg" alt="Pantalla 4">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 CondAPP.</p>
+    </div>
   </footer>
 
-  <script>
-    // Función de detección de móvil
-    function isMobile() {
-      return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
-    }
-
-    if (isMobile()) {
-      document.getElementById('mobile-content').style.display = 'block';
-    } else {
-      document.getElementById('desktop-content').style.display = 'block';
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
