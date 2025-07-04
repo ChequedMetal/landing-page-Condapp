@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Descarga CondAPP</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #2c3e50;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+    }
+    .mockup {
+      width: 250px;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+    }
+    .download-btn {
+      background: #2980b9;
+      color: white;
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .download-btn:hover {
+      background: #1f5f87;
+    }
+    .qr-container img {
+      width: 200px;
+      margin-top: 1rem;
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1>CondAPP</h1>
+  <p>
+    Gestiona tu condominio de manera rápida y sencilla. Descarga CondAPP para acceder a todas las funciones desde tu dispositivo Android.
+  </p>
+
+  <!-- Imagen de muestra opcional -->
+  <!-- <img class="mockup" src="condapp-mockup.png" alt="Vista previa de CondAPP"> -->
+
+  <!-- Sección para móvil -->
+  <div id="mobile-content" style="display:none;">
+    <a href="TU_ARCHIVO_APK.apk" class="download-btn">Descargar APK</a>
+  </div>
+
+  <!-- Sección para PC -->
+  <div id="desktop-content" style="display:none;">
+    <p>Escanea este código QR con tu teléfono para descargar la app:</p>
+    <div class="qr-container">
+      <img src="qr.png" alt="Código QR para abrir la página en tu móvil">
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 CondAPP | contacto@condapp.cl
+  </footer>
+
+  <script>
+    // Función de detección de móvil
+    function isMobile() {
+      return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
+    }
+
+    if (isMobile()) {
+      document.getElementById('mobile-content').style.display = 'block';
+    } else {
+      document.getElementById('desktop-content').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
