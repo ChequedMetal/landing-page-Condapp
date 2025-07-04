@@ -106,3 +106,26 @@ body {
     text-align: center;
   }
   
+  /* QR Section */
+.qr-section {
+    background-color: #1A1A1A;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .qr-section h2 {
+    color: #9D4EDD;
+    margin-bottom: 20px;
+  }
+  
+  .qr-section p {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+  }
+  
+  .qr-section .qr-image {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
